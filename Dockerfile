@@ -5,4 +5,6 @@ RUN apk add --no-cache \
         curl \
         --no-document
 
+ADD entrypoint.sh /entrypoint.sh
+
 ENTRYPOINT ["/entrypoint.sh"]

@@ -16,22 +16,25 @@ NOTHING
 **main.workflow**
 
 ```hcl
-workflow "Ping RPC" {
+workflow "Deploy to GitHub Pages" {
   on = "push"
-  resolves = ["hugo-deploy-gh-pages", "ping-rpc"]
+  resolves = ["rpc-ping"]
 }
 
 action "hugo-deploy-gh-pages" {
   uses = "khanhicetea/gh-actions-hugo-deploy-gh-pages@master"
-  secrets = ["GIT_DEPLOY_KEY"]
+  secrets = [
+    "GIT_DEPLOY_KEY",
+  ]
 }
 
-action "ping-rpc" {
+action "rpc-ping" {
   uses = "khanhicetea/gh-actions-rpc-ping@master"
   env = {
-    PING_TITLE  = "KhanhIceTea Blog"
+    PING_TITLE = "KhanhIceTea B(rain)-log"
     PING_URL = "https://khanhicetea.com"
   }
+  needs = ["hugo-deploy-gh-pages"]
 }
 ```
 
