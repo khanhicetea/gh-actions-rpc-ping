@@ -8,9 +8,9 @@ NOTHING
 
 ## Environment Variables
 
-- `PING_TITLE` : Your website, blog title
-- `PING_URL` : URL want to ping
-- `RPC_ENDPOINT` : RPC Endpoint, default is `http://rpc.pingomatic.com/`
+- `PING_TITLE` : **required**,Your website, blog title
+- `PING_URL` : **required**, URL want to ping
+- `RPC_ENDPOINT` : **optinal**, RPC Endpoint, default is `http://rpc.pingomatic.com/`
 
 ## Example
 
