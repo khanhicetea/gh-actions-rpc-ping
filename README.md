@@ -1,4 +1,4 @@
-# Hugo Github Action
+# RPC PING Github Action
 
 GitHub Action for ping website via XML-RPC.
 
@@ -10,6 +10,7 @@ NOTHING
 
 - `PING_TITLE` : Your website, blog title
 - `PING_URL` : URL want to ping
+- `RPC_ENDPOINT` : RPC Endpoint, default is `http://rpc.pingomatic.com/`
 
 ## Example
 
