@@ -12,7 +12,7 @@ LABEL "maintainer"="KhanhIceTea <khanhicetea@gmail.com>"
 LABEL "Name"="RPC Ping"
 LABEL "Version"="0.1.0"
 
-RUN apk add --no-cache --no-document \
+RUN apk add --no-cache \
 	ca-certificates \
         curl
 
